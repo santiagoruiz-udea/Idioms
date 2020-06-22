@@ -1,0 +1,103 @@
+#index{
+    background-image: url("../img/bg2.jpg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-color: #202020;
+}
+
+.row{
+    padding:10px; 
+    margin-right: 10px;
+    margin-top: 40px;
+    width: auto;
+}
+
+.header-title{
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c00;
+    color: white;
+    font-size: 60px;
+}
+
+#bg{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*-------------------------*/
+a{
+    cursor: pointer;
+}
+
+.carousel-inner img{
+    width: 100%;
+}
+
+.icon-user{
+background-image : url("../icons/user-shape.png");
+background-size: cover;
+display: inline-block;
+height: 30px;
+width: 30px;
+}
+
+.dropdown-menu{
+    background-color: rgb(240, 233, 233);
+}
+
+#footer-carousel .carousel-inner img{
+    width: 100%;
+    padding: 15px;
+}
+
+i img {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+h5, h6{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.footer{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.form-gorup button{
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+footer form{
+    padding: 0px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h5{
+    color: #f1f1f1;
+    text-align: center;
+}
+
+footer p{
+    color: #f1f1f1;
+}
+
+div .list-unstyled {
+    color: #f1f1f1;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+
+

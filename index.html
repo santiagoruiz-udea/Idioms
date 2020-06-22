@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" >
+
+    </head>
+
+<body id="index">
+    <nav class="navbar navbar-expand-md navbar-light"  >
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-2">
+                <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="width: 100%; margin-right: 0px"> </a>
+            </div>
+
+            <div class="offset-lg-5 col-lg-2" style="display: inline-flex;">
+                <div class="dropdown">
+                    <button class="btn btn-outline-info dropdown-toggle w3-round-xxlarge" data-toggle="dropdown"><b>Idioma</b></button>
+                    <div class="dropdown-menu dropdown-menu">
+                        <a href="" class="dropdown-item">Español</a>
+                        <a href="" class="dropdown-item">English</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-1">
+                <button class="btn btn-outline-info w3-round-xxlarge" type="button" data-toggle="modal" data-target="#modal_info" ><b>Regístrate</b></button>
+            </div>
+
+            <div class="col-lg-1" >
+                <button class="btn btn-outline-info w3-round-xxlarge" type="button" data-toggle="modal" data-target="#modal_info" ><i class="icon-user"> </i> <b style="padding: 10px;">Inicia sesion</b></button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header-title">
+        <h1 id="bg">Practica tus idiomas con personas nativas mientras estas en tu casa</h1>
+        <p>My supercool header</p>
+    </div>
+
+    <div class="modal fade" id="modal_info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="width: 35%; margin-left: 170px;"> </a>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-size: 30px; color: black;"> <b>Regístrate</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="col-form-label"> <b>Nombre</b></label>
+                            <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="e-mail" class="col-form-label"> <b>Correo Electrónico</b></label>
+                            <input type="text" class="form-control" id="e-mail" placeholder="e-mail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="col-form-label"><b>Contraseña</b></label>
+                            <input type="text" class="form-control" id="password" minength="10" placeholder="6 caracteres como mínimo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="col-form-label"><b>Vuelve a escribir la contraseña</b></label>
+                            <input type="text" class="form-control" id="password" minength="10" required>
+                        </div>
+
+                        <button class="btn btn-warning" type="submit"> <b>Sign-in</b></button>
+                    </form>
+                </div>
+            
+                <div class="modal-footer" >
+                    <p>Al continuar, aceptas las <a href="#">Condiciones de uso<a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
+                    <div id="accordion">
+                        <a href="#" data-toggle="collapse" data-target="#collapse1" style="margin-right: 337px;"> ¿Necesitas ayuda?</a>
+                        <div class="collapse" id="collapse1">
+                            <ul style="list-style:disc;">
+                                <li> <a href="#">¿Olvidaste tu contraseña?</a></li>
+                                <li> <a href="#">Otros problemas con el inicio de sesión</a></li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer" class="container-fluid" >
+        <div class="row" >
+            <div class="col-lg-6 col-md-12 col-sm-12" style="background-color: #202020;">
+                <footer class="footer" >
+                    <div class="row" >
+                        <div class="col-md-6">
+                            <h5 class="text-uppercase" style="color: #f0eeee;"> Conoce más </h5>
+                            <div id="footer-carousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"> <a href="products.html"> <img src="img/carrusel1.jpg"></a></div>
+                                    <div class="carousel-item"> <a href="products.html"><img src="img/carrusel2.jpg" ></a></div>
+                                    <div class="carousel-item"> <a href="products.html"><img src="img/carrusel3.jpg" ></a></div>
+                                </div>
+                    
+                                <a href="#footer-carousel" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                                <a href="#footer-carousel" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                                
+                                <ul class="carousel-indicators">
+                                    <li data-target="#footer-carousel" class="active" data-slide-to=0></li>
+                                    <li data-target="#footer-carousel" data-slide-to=1></li>
+                                    <li data-target="#footer-carousel" data-slide-to=2></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 ">
+                            <h6 class="text-uppercase mb-0 text-center" style="color: #f0eeee;">¡Síguenos!</h6>
+
+                            <!-- Facebook -->
+                            <a><i> <img src="icons/fb.png" style="width: 15%;"></i></a>
+                            
+                            <!--Instagram-->
+                            <a> <i><img src="icons/ig.png" style="width: 15%;"> </i></a>
+
+                            <!--WhatsApp-->
+                            <a> <i> <img src="icons/wp.png" style="width: 15%;"></i> </a>
+
+                            <ul class="list-unstyled">
+                                <li > <a>santiago.ruiz3@udea.edu.co</a> </li>
+                                <li > +57 323 5043165 </li>
+                                <li > Medellín, Colombia </li>
+                                <li > Universidad de Antioquia </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </footer>
+            </div>
+            
+
+            <div class="col-lg-6 col-md-12" style="background-color: #202020;" >
+                <footer class="footer" >
+                    <h5 class="text-uppercase font-weight-bold">Escríbenos</h5><hr>
+
+                    <form>
+                        <fieldset class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electrónico">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <textarea class="form-control" id="exampleMessage" placeholder="Mensaje"></textarea>
+                        </fieldset>
+
+                        <div class="form-gorup row">
+                            <button class="btn btn-primary"> Enviar</button>
+                        </div>
+                    </form>
+                </footer>
+            </div>
+        </div>
+    </div> 
+    
+
+
+
+</body>
+</html>
+
+
