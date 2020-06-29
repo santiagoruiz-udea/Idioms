@@ -1,5 +1,5 @@
 #index{
-    background-image: url("../img/bg1.jpg");
+    background-image: url("../img/bg2.jpg");
     height: 500px; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -14,7 +14,7 @@
 }
 
 .btn{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(47, 47, 47, 0.815);
     border-color: #7A64FF;
     border-width: 3px;
     color:#7A64FF;
@@ -42,8 +42,13 @@
 
 .next:hover{
     color: rgba(0, 0, 0, 0.801);
+    transform: translateX(2px);
 }
 
+a{
+    color: blue;
+    text-decoration: underline;
+}
 
 .dropdown-menu{
     transform: translate3d(120px, 50px, 0px)!important;
@@ -85,11 +90,14 @@
     margin-right: 10px;
 }
 
-#sel_lang {
+#sel_lang_p, #sel_lang_n {
     text-align:center;
     display: grid;
     padding-left: 120px;
+}
 
+.modal-header b{
+    text-align: center;
 }
 
 .header-title1{
@@ -99,7 +107,7 @@
 }
 
 .header-title1 h1{
-    text-shadow: 3px 3px #202020, 0px 0px 15px #7A64FF ;
+    text-shadow: 3px 3px #202020;
     color: white;
     font-size: 60px;
     font-weight: bold;
@@ -214,5 +222,8 @@ div .list-unstyled {
     margin-left: 35px;
 }
 
+div .list-unstyled a:hover{
+    text-decoration: underline;
+}
 
 
