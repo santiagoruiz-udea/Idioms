@@ -1,10 +1,14 @@
+
 window.onload = function() { 
     var flags = document.getElementsByClassName("select-flag");
     //var drop_items = document.getElementsByClassName("dropdown-item");
 
+    $(".my-select").chosen({width:"100%"});
+
     
     // Asignacion de la imagen de cada drop-item
     for (var i = 0; i < flags.length; i++){
+        console.log(flags[i].id);
         flags[i].style.backgroundImage = "url(img/" + flags[i].id + ".png)";
         flags[i].style.backgroundSize = "cover";
         flags[i].style.display = "inline-block";

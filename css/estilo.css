@@ -1,4 +1,4 @@
-#index{
+body{
     background-image: url("../img/bg2.jpg");
     height: 500px; /* You must set a specified height */
     background-position: center; /* Center the image */
@@ -157,10 +157,7 @@ a{
     text-align: center;
 }
 
-#Español1{
-    background-image: url(../img/Español.png);
-    background-size: cover;
-    display: inline-block;
+.selec-flag{
     height: 20px;
     width: 30px;
     border-radius: 20%;

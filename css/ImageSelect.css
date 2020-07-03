@@ -1,0 +1,24 @@
+/* Image for Single mode */
+.chose-image-small {
+	width:30px;
+	height:20px;
+	vertical-align: middle;
+	margin: -3px 7px 0 0;
+	padding: 0 3px 0 0;
+	border-radius: 20%;
+}
+
+/* Images appended to the li(s) */
+.chose-image-list {
+	width:30px;
+	height:20px;
+	vertical-align: middle;
+	margin: -3px 7px 0 0;
+	padding: 0 3px 0 0;
+	border-radius: 20%;
+}
+
+/* Grey-out image for Multi mode */
+div.chosen-container-multi .result-selected img {
+	opacity: 0.3;
+}
