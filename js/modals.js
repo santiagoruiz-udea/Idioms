@@ -1,6 +1,6 @@
 window.onload = function() { 
-    var flags = document.getElementsByClassName("drop-flag");
-    var drop_items = document.getElementsByClassName("dropdown-item");
+    var flags = document.getElementsByClassName("select-flag");
+    //var drop_items = document.getElementsByClassName("dropdown-item");
 
     
     // Asignacion de la imagen de cada drop-item
@@ -12,13 +12,13 @@ window.onload = function() {
         flags[i].style.width = "30px";
         flags[i].style.borderRadius = "20%";
         flags[i].style.marginRight = "10px";
-        drop_items[i].onclick = ocultar_de_la_lista;
+        //drop_items[i].onclick = ocultar_de_la_lista;
     }
 
   }
 
 // Funcion para ocultar el contenido de un párrafo
-function ocultar_de_la_lista(){
+/*function ocultar_de_la_lista(){
     var btn = document.createElement("p");                // Create a <button> element
     var img = document.createElement("i");
     
@@ -52,5 +52,5 @@ function ocultar_de_la_lista(){
         modal_body.appendChild(btn);
     }
 
-}
+}*/
 

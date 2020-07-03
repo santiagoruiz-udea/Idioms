@@ -239,7 +239,22 @@
                 </div>
             
                 <div class="modal-body" >
-                    <div class="dropdown justify-items-center" id="sel_lang_p">
+                    <select class="form-control sel-target-lang justify-content-center">
+                        <option selected>Elige un idioma</option>
+                        <option> <i class="select-flag nativ" id="Español1"   value="esp"> </i>Español</option>
+                        <option> <i class="select-flag nativ" id="Ingles"    value="eng"> </i>Iglés</option>
+                        <option> <i class="select-flag nativ" id="Portugues" value="por"> </i>Portugués</option>
+                        <option> <i class="select-flag nativ" id="Aleman"    value="ger"> </i>Alemán</option>
+                        <option> <i class="select-flag nativ" id="Frances"   value="fra"> </i>Francés</option>
+                        <option> <i class="select-flag nativ" id="Italiano"  value="ita"> </i>Italiano</option>
+                        <option> <i class="select-flag nativ" id="Koreano"   value="kor"> </i>Koreano</option>
+                        <option> <i class="select-flag nativ" id="Arabe"     value="ara"> </i>Árabe</option>
+                        <option> <i class="select-flag nativ" id="Chino"     value="chn"> </i>Chino</option>
+                        <option> <i class="select-flag nativ" id="Ruso"      value="rus"> </i>Ruso </option>
+                    </select>
+
+
+                    <!--div class="dropdown justify-items-center" id="sel_lang_p">
                         <button class="btn btn-outline w3-round-xxlarge dropdown-toggle" id="drop_lang_p" data-toggle="dropdown" style="margin-bottom: 15px;"><b>Selecciona un idioma</b></button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <h4 class="dropdown-header">Idiomas populares</h4>
@@ -254,7 +269,7 @@
                             <a class="dropdown-item pract" id="Chino"><i class="drop-flag pract" id="Chino"         value="chn"> </i>Chino</a>
                             <a class="dropdown-item pract" id="Ruso"><i class="drop-flag pract" id="Ruso"           value="rus"> </i>Ruso</a>
                         </div>
-                    </div>                    
+                    </div-->                    
                 </div>
 
                 <div class="modal-footer justify-content-center">
@@ -278,22 +293,36 @@
                 </div>
             
                 <div class="modal-body" >
-                    <div class="dropdown justify-items-center" id="sel_lang_n">
+                    <select class="form-control sel-target-lang justify-content-center">
+                        <option selected>Elige un idioma</option>
+                        <option> <i class="select-flag nativ" id="Español"   value="esp"> </i>Español</option>
+                        <option> <i class="select-flag nativ" id="Ingles"    value="eng"> </i>Iglés</option>
+                        <option> <i class="select-flag nativ" id="Portugues" value="por"> </i>Portugués</option>
+                        <option> <i class="select-flag nativ" id="Aleman"    value="ger"> </i>Alemán</option>
+                        <option> <i class="select-flag nativ" id="Frances"   value="fra"> </i>Francés</option>
+                        <option> <i class="select-flag nativ" id="Italiano"  value="ita"> </i>Italiano</option>
+                        <option> <i class="select-flag nativ" id="Koreano"   value="kor"> </i>Koreano</option>
+                        <option> <i class="select-flag nativ" id="Arabe"     value="ara"> </i>Árabe</option>
+                        <option> <i class="select-flag nativ" id="Chino"     value="chn"> </i>Chino</option>
+                        <option> <i class="select-flag nativ" id="Ruso"      value="rus"> </i>Ruso </option>
+                    </select>
+
+                    <!--div class="dropdown justify-items-center" id="sel_lang_n">
                         <button class="btn btn-outline w3-round-xxlarge dropdown-toggle" id="drop_lang_n" data-toggle="dropdown" style="margin-bottom: 15px;"><b>Selecciona un idioma</b></button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <h4 class="dropdown-header">Idiomas populares</h4>
-                            <a class="dropdown-item nativ" id="Español"><i class="drop-flag nativ" id="Español"     value="esp"> </i>Español</a>
-                            <a class="dropdown-item nativ" id="Ingles"><i class="drop-flag nativ" id="Ingles"       value="eng"> </i>Iglés</a>
-                            <a class="dropdown-item nativ" id="Portugues"><i class="drop-flag nativ" id="Portugues" value="por"> </i>Portugués</a>
-                            <a class="dropdown-item nativ" id="Aleman"><i class="drop-flag nativ" id="Aleman"       value="ger"> </i>Alemán</a>
-                            <a class="dropdown-item nativ" id="Frances"><i class="drop-flag nativ" id="Frances"     value="fra"> </i>Francés</a>
-                            <a class="dropdown-item nativ" id="Italiano"><i class="drop-flag nativ" id="Italiano"   value="ita"> </i>Italiano</a>
-                            <a class="dropdown-item nativ" id="Koreano"><i class="drop-flag nativ" id="Koreano"     value="kor"> </i>Koreano</a>
-                            <a class="dropdown-item nativ" id="Arabe"><i class="drop-flag nativ" id="Arabe"         value="ara"> </i>Árabe</a>
-                            <a class="dropdown-item nativ" id="Chino"><i class="drop-flag nativ" id="Chino"         value="chn"> </i>Chino</a>
-                            <a class="dropdown-item nativ" id="Ruso"><i class="drop-flag nativ" id="Ruso"           value="rus"> </i>Ruso</a>
+                            <a class="dropdown-item nativ" id="Español">   <i class="drop-flag nativ" id="Español"   value="esp"> </i>Español</a>
+                            <a class="dropdown-item nativ" id="Ingles">    <i class="drop-flag nativ" id="Ingles"    value="eng"> </i>Iglés</a>
+                            <a class="dropdown-item nativ" id="Portugues"> <i class="drop-flag nativ" id="Portugues" value="por"> </i>Portugués</a>
+                            <a class="dropdown-item nativ" id="Aleman">    <i class="drop-flag nativ" id="Aleman"    value="ger"> </i>Alemán</a>
+                            <a class="dropdown-item nativ" id="Frances">   <i class="drop-flag nativ" id="Frances"   value="fra"> </i>Francés</a>
+                            <a class="dropdown-item nativ" id="Italiano">  <i class="drop-flag nativ" id="Italiano"  value="ita"> </i>Italiano</a>
+                            <a class="dropdown-item nativ" id="Koreano">   <i class="drop-flag nativ" id="Koreano"   value="kor"> </i>Koreano</a>
+                            <a class="dropdown-item nativ" id="Arabe">     <i class="drop-flag nativ" id="Arabe"     value="ara"> </i>Árabe</a>
+                            <a class="dropdown-item nativ" id="Chino">     <i class="drop-flag nativ" id="Chino"     value="chn"> </i>Chino</a>
+                            <a class="dropdown-item nativ" id="Ruso">      <i class="drop-flag nativ" id="Ruso"      value="rus"> </i>Ruso</a>
                         </div>
-                    </div>                    
+                    </div-->                    
                 </div>
 
                 <div class="modal-footer justify-content-center">

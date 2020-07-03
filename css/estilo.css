@@ -157,6 +157,16 @@ a{
     text-align: center;
 }
 
+#Español1{
+    background-image: url(../img/Español.png);
+    background-size: cover;
+    display: inline-block;
+    height: 20px;
+    width: 30px;
+    border-radius: 20%;
+    margin-right: 10px;
+}
+
 /*-------------------------*/
 a{
     cursor: pointer;
