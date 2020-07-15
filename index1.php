@@ -1,4 +1,4 @@
-<?php include('/php/server.php') ?>
+<?php include('server.php') ?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -145,16 +145,16 @@
                 </div>
             
                 <div class="modal-body">
-                    <form>
+                    <form method="post">
+                        <?php include('errors.php'); ?>
                         <div class="form-group">
                             <label for="name" class="col-form-label"> <b>Nombre</b></label>
                             <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
-                        </div>
-
+						</div>
                         <div class="form-group">
-                            <label for="name" class="col-form-label"><b>Apellido</b></label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" required>
-                        </div>
+                            <label for="name" class="col-form-label"> <b>Apellido</b></label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Apellido" name="lastname" required>
+						</div>
 
                         <div class="form-group">
                             <label for="name" class="col-form-label"> <b>Nombre de usuario</b></label>
@@ -180,14 +180,13 @@
                             <label for="password" class="col-form-label"><b>Vuelve a escribir la contraseña</b></label>
                             <input type="password" class="form-control" id="password_2" minength="6" placeholder="Ingrese nuevamente su contraseña" name="password_2" required>
                         </div>
-                    </form>
+						<div class="modal-footer justify-content-center">
+                    		<button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_p" name="reg_user_1"> <b>Siguiente</b></button>
+                    		<p>Al continuar, aceptas las <a href="#">Condiciones de uso<a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
+                		</div>
+					
+					</form>
                 </div>
-                <form>
-                    <div class="modal-footer justify-content-center" >
-                        <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_p" name="reg_user_1"> <b>Siguiente</b></button>
-                        <p>Al continuar, aceptas las <a href="#">Condiciones de uso<a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
@@ -205,35 +204,36 @@
                 </div>
             
                 <div class="modal-body">
-                    <form >
+                    <form method="post">
+
+						<?php include('errors.php'); ?>
                         <div class="form-group">
-                            <label for="e-mail" class="col-form-label"> <b>Correo Electrónico</b></label>
-                            <input type="email" class="form-control" id="e-mail" placeholder="e-mail o nombre de usuario" name="email" required>
+                            <label for="name" class="col-form-label"> <b>Nombre de usuario</b></label>
+                            <input type="text" class="form-control" id="username" placeholder="username" name="username" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="password" class="col-form-label"><b>Contraseña</b></label>
-                            <input type="password" class="form-control" id="password" minength="10" placeholder="6 caracteres como mínimo" name="password_1" required>
+                            <input type="password" class="form-control" id="password" minength="10" placeholder="6 caracteres como mínimo" name="password" required>
                         </div>
 
                         <div class="form-group row">
                             <label> <input type="checkbox" name="remember" style="margin-left: 10px;" checked> Recordar mis datos</label>
                         </div>
-                    </form>
-                </div>
-            
-                <div class="modal-footer justify-content-center" >
-                    <button class="btn btn-outline w3-round-xxlarge" type="submit" name="login_user"> <b>Iniciar sesión</b></button>
+						<div class="modal-footer justify-content-center" >
+                    		<button class="btn btn-outline w3-round-xxlarge" type="submit" name="login_user"> <b>Iniciar sesión</b></button>
                     
-                    <div id="accordion">
-                        <a href="#" data-toggle="collapse" data-target="#collapse1" style="margin-right: 328px;"> ¿Necesitas ayuda?</a>
-                        <div class="collapse" id="collapse1">
-                            <ul style="list-style:disc;">
-                                <li> <a href="#modal_rest_pass" data-toggle="modal" data-target="#modal_rest_pass">¿Olvidaste tu contraseña?</a></li>
-                                <li> <a href="#">Otros problemas con el inicio de sesión</a></li>   
-                            </ul>
-                        </div>
-                    </div>
+                    		<div id="accordion">
+                        		<a href="#" data-toggle="collapse" data-target="#collapse1" style="margin-right: 328px;"> ¿Necesitas ayuda?</a>
+                        		<div class="collapse" id="collapse1">
+                            		<ul style="list-style:disc;">
+                                		<li> <a href="#modal_rest_pass" data-toggle="modal" data-target="#modal_rest_pass">¿Olvidaste tu contraseña?</a></li>
+                                		<li> <a href="#">Otros problemas con el inicio de sesión</a></li>   
+                            		</ul>
+                        		</div>
+                    		</div>
+                		</div>
+					</form>
                 </div>
             </div>
         </div>
@@ -252,21 +252,22 @@
                 </div>
             
                 <div class="modal-body" >
-                    <div class="container">
-                        <select class="my-select">
-                            <option data-img-src="img/Español.png" value="esp" selected>Español</option>
-                            <option data-img-src="img/Ingles.png" value="eng"> Iglés</option>
-                            <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
-                            <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
-                            <option data-img-src="img/Frances.png" value="fra"> Francés</option>
-                            <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
-                            <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
-                            <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
-                            <option data-img-src="img/Chino.png" value="chn"> Chino</option>
-                            <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
-                        </select>
-                    </div>
-
+                    <form method="post">
+                        <div class="container" id="targlang" name="targlang">
+                            <select class="my-select">
+                                <option data-img-src="img/Español.png" value="esp" selected>Español</option>
+                                <option data-img-src="img/Ingles.png" value="eng"> Iglés</option>
+                                <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
+                                <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
+                                <option data-img-src="img/Frances.png" value="fra"> Francés</option>
+                                <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
+                                <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
+                                <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
+                                <option data-img-src="img/Chino.png" value="chn"> Chino</option>
+                                <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
+                            </select>
+                        </div>
+                    
                     <!--div class="dropdown justify-items-center" id="sel_lang_p">
                         <button class="btn btn-outline w3-round-xxlarge dropdown-toggle" id="drop_lang_p" data-toggle="dropdown" style="margin-bottom: 15px;"><b>Selecciona un idioma</b></button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -283,14 +284,17 @@
                             <a class="dropdown-item pract" id="Ruso"><i class="drop-flag pract" id="Ruso"           value="rus"> </i>Ruso</a>
                         </div>
                     </div-->                    
-                </div>
+                
 
-                <div class="modal-footer justify-content-center">
-                    <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="reg_user_2"> <b>Siguiente</b></button>
-                </div>
+                        <div class="modal-footer justify-content-center">
+                            <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="reg_user_2"> <b>Siguiente</b></button>
+                        </div>
+                    </form>
             
+                </div>
+        
             </div>
-        </div>
+        </div>    
     </div>
 
     <div class="modal fade" id="modal_lang_n" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -306,20 +310,22 @@
                 </div>
             
                 <div class="modal-body" >
-                    <div class="container">
-                        <select class="my-select">
-                            <option data-img-src="img/Español.png" value="esp" selected>Español</option>
-                            <option data-img-src="img/Ingles.png" value="eng"> Iglés</option>
-                            <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
-                            <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
-                            <option data-img-src="img/Frances.png" value="fra"> Francés</option>
-                            <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
-                            <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
-                            <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
-                            <option data-img-src="img/Chino.png" value="chn"> Chino</option>
-                            <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
-                        </select>
-                    </div>
+                    <form>
+                        <div class="container">
+                            <select class="my-select" id="natlang" name="natlang">
+                                <option data-img-src="img/Español.png" value="esp" selected>Español</option>
+                                <option data-img-src="img/Ingles.png" value="eng"> Iglés</option>
+                                <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
+                                <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
+                                <option data-img-src="img/Frances.png" value="fra"> Francés</option>
+                                <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
+                                <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
+                                <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
+                                <option data-img-src="img/Chino.png" value="chn"> Chino</option>
+                                <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
+                            </select>
+                        </div>
+                    
 
                     <!--div class="dropdown justify-items-center" id="sel_lang_n">
                         <button class="btn btn-outline w3-round-xxlarge dropdown-toggle" id="drop_lang_n" data-toggle="dropdown" style="margin-bottom: 15px;"><b>Selecciona un idioma</b></button>
@@ -337,12 +343,12 @@
                             <a class="dropdown-item nativ" id="Ruso">      <i class="drop-flag nativ" id="Ruso"      value="rus"> </i>Ruso</a>
                         </div>
                     </div-->                    
-                </div>
-
-                <div class="modal-footer justify-content-center">
-                    <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="reg_user_3"> <b>Siguiente</b></button>
-                </div>
-            
+                            <div class="modal-footer justify-content-center">
+                                <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="reg_user_3"> <b>Siguiente</b></button>
+                    
+                            </div>
+                    </form>  
+                </div>      
             </div>
         </div>
     </div>
