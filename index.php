@@ -16,11 +16,18 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="css/estilo.css" >
-        <script type="text/javascript" src="js/modals.js" charset="UTF-8"></script></head>
+        <script type="text/javascript" src="js/modals.js" charset="UTF-8"></script></head> 
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/chosen.css">
+        <link rel="stylesheet" href="css/ImageSelect.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/chosen.jquery.js"></script>
+        <script src="js/ImageSelect.jquery.js"></script>
 
     </head>
 
-<body id="index">
+<body>
     <nav>
         <div class="row align-items-center justify-content-around">
             <div class="col-lg-2">
@@ -43,52 +50,52 @@
 
     <div class="row flags">
         <div class="offset-lg-1 col-lg-1 align-items-center">
-            <img src="img/Español.png" alt="">
+            <a href="lang_info/esp.html"><img src="img/Español.png" alt=""></a>
             <p>Español</p>
         </div>
 
         <div class="col-lg-1">
-            <img src="img/Ingles.png" alt="">
+            <a href="lang_info/eng.html"><img src="img/Ingles.png" alt=""></a>
             <p>Ingles</p>
         </div>
 
         <div class="col-lg-1">
-            <img src="img/Portugues.png" alt="">
+            <a href="lang_info/por.html"><img src="img/Portugues.png" alt=""></a>
             <p>Portugues</p>
         </div>
         
         <div class="col-lg-1">
-            <img src="img/Aleman.png" alt="">
+            <a href="lang_info/ger.html"><img src="img/Aleman.png" alt=""></a>
             <p>Aleman</p>
         </div>
         
         <div class="col-lg-1">
-            <img src="img/Frances.png" alt="">
+            <a href="lang_info/fre.html"><img src="img/Frances.png" alt=""></a>
             <p>Francés</p>
         </div>
 
         <div class="col-lg-1">
-            <img src="img/Italiano.png" alt="">
+            <a href="lang_info/ita.html"><img src="img/Italiano.png" alt=""></a>
             <p>Italiano</p>
         </div>
 
         <div class="col-lg-1">
-            <img src="img/Koreano.png" alt="">
-            <p>Koreano</p>
+            <a href="lang_info/kor.html"><img src="img/Coreano.png" alt=""></a>
+            <p>Coreano</p>
         </div>
 
         <div class="col-lg-1">
-            <img src="img/Arabe.png" alt="">
+            <a href="lang_info/ara.html"><img src="img/Arabe.png" alt=""></a>
             <p>Árabe</p>
         </div>
         
         <div class="col-lg-1">
-            <img src="img/Chino.png" alt="">
+            <a href="lang_info/chi.html"><img src="img/Chino.png" alt=""></a>
             <p>Chino</p>
         </div>
 
         <div class="col-lg-1">
-            <img src="img/Ruso.png" alt="">
+            <a href="lang_info/rus.html"><img src="img/Ruso.png" alt=""></a>
             <p>Ruso</p>
         </div>
     </div>
@@ -139,15 +146,16 @@
             
                 <div class="modal-body">
                     <form method="post" action="index.php">
-						<?php include('errors.php'); ?>
+                    <?php include('errors.php'); ?>
                         <div class="form-group">
                             <label for="name" class="col-form-label"> <b>Nombre</b></label>
                             <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
-						</div>
+                        </div>
+
                         <div class="form-group">
-                            <label for="name" class="col-form-label"> <b>Apellido</b></label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Apellido" name="lastname" required>
-						</div>
+                            <label for="name" class="col-form-label"><b>Apellido</b></label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" required>
+                        </div>
 
                         <div class="form-group">
                             <label for="name" class="col-form-label"> <b>Nombre de usuario</b></label>
@@ -173,15 +181,48 @@
                             <label for="password" class="col-form-label"><b>Vuelve a escribir la contraseña</b></label>
                             <input type="password" class="form-control" id="password_2" minength="6" placeholder="Ingrese nuevamente su contraseña" name="password_2" required>
                         </div>
-						<div class="modal-footer justify-content-center">
-                    		<button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_p" name="reg_user_1"> <b>Siguiente</b></button>
-                    		<p>Al continuar, aceptas las <a href="#">Condiciones de uso<a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
-                		</div>
-					
-					</form>
-                </div>
-            
+                        <div class="form-group">  
+                            <label for="targlang" class="col-form-label"><b>Elige el idioma que quieres aprender</b></label>
+                            <div class="container">
+                                <select class="my-select" name="targlang">
+                                    <option data-img-src="img/Español.png" value="esp" selected>Español</option>
+                                    <option data-img-src="img/Ingles.png" value="eng"> Inglés</option>
+                                    <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
+                                    <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
+                                    <option data-img-src="img/Frances.png" value="fra"> Francés</option>
+                                    <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
+                                    <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
+                                    <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
+                                    <option data-img-src="img/Chino.png" value="chn"> Chino</option>
+                                    <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
+                                </select>
+                            </div>                   
+                        </div>
+                        <div class="form-group">  
+                            <label for="natlang" class="col-form-label"><b>Elige tu idioma nativo</b></label>
+                            <div class="container">
+                                <select class="my-select" name="natlang">
+                                    <option data-img-src="img/Español.png" value="esp" selected>Español</option>
+                                    <option data-img-src="img/Ingles.png" value="eng"> Inglés</option>
+                                    <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
+                                    <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
+                                    <option data-img-src="img/Frances.png" value="fra"> Francés</option>
+                                    <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
+                                    <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
+                                    <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
+                                    <option data-img-src="img/Chino.png" value="chn"> Chino</option>
+                                    <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
+                                </select>
+                            </div>                   
+                        </div>
 
+                        <div class="modal-footer justify-content-center" >
+                            <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_p" name="reg_user"> <b>Siguiente</b></button>
+                            <p>Al continuar, aceptas las <a href="#">Condiciones de uso<a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
+                        </div>
+                        
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -199,115 +240,35 @@
                 </div>
             
                 <div class="modal-body">
-                    <form method="post">
-
-						<?php include('errors.php'); ?>
+                    <form method="post" >
                         <div class="form-group">
-                            <label for="name" class="col-form-label"> <b>Nombre de usuario</b></label>
-                            <input type="text" class="form-control" id="username" placeholder="username" name="username" required>
+                            <label for="username" class="col-form-label"> <b>Nombre de usuario</b></label>
+                            <input type="text" class="form-control" id="e-mail" placeholder="Nombre de usuario" name="username" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="password" class="col-form-label"><b>Contraseña</b></label>
-                            <input type="password" class="form-control" id="password" minength="10" placeholder="6 caracteres como mínimo" name="password" required>
+                            <input type="password" class="form-control" id="password" minength="10" placeholder="6 caracteres como mínimo" name="password_1" required>
                         </div>
 
                         <div class="form-group row">
                             <label> <input type="checkbox" name="remember" style="margin-left: 10px;" checked> Recordar mis datos</label>
                         </div>
-						<div class="modal-footer justify-content-center" >
-                    		<button class="btn btn-outline w3-round-xxlarge" type="submit" name="login_user"> <b>Iniciar sesión</b></button>
+                        <div class="modal-footer justify-content-center" >
+                            <button class="btn btn-outline w3-round-xxlarge" type="submit" name="login_user"> <b>Iniciar sesión</b></button>
                     
-                    		<div id="accordion">
-                        		<a href="#" data-toggle="collapse" data-target="#collapse1" style="margin-right: 328px;"> ¿Necesitas ayuda?</a>
-                        		<div class="collapse" id="collapse1">
-                            		<ul style="list-style:disc;">
-                                		<li> <a href="#modal_rest_pass" data-toggle="modal" data-target="#modal_rest_pass">¿Olvidaste tu contraseña?</a></li>
-                                		<li> <a href="#">Otros problemas con el inicio de sesión</a></li>   
-                            		</ul>
-                        		</div>
-                    		</div>
-                		</div>
-					</form>
-                </div>
-            
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal_lang_p" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="margin-left: 130px;"> </a>
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="font-size: 30px; color: black; margin-left: 50px;"> <b>¿Que idiomas quieres practicar?</b></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            
-                <div class="modal-body" >
-                    <div class="dropdown justify-items-center" id="sel_lang_p">
-                        <button class="btn btn-outline w3-round-xxlarge dropdown-toggle" id="drop_lang_p" data-toggle="dropdown" style="margin-bottom: 15px;"><b>Selecciona un idioma</b></button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <h4 class="dropdown-header">Idiomas populares</h4>
-                            <a class="dropdown-item pract" id="Español"><i class="drop-flag pract" id="Español"     value="esp"> </i>Español</a>
-                            <a class="dropdown-item pract" id="Ingles"><i class="drop-flag pract" id="Ingles"       value="eng"> </i>Iglés</a>
-                            <a class="dropdown-item pract" id="Portugues"><i class="drop-flag pract" id="Portugues" value="por"> </i>Portugués</a>
-                            <a class="dropdown-item pract" id="Aleman"><i class="drop-flag pract" id="Aleman"       value="ger"> </i>Alemán</a>
-                            <a class="dropdown-item pract" id="Frances"><i class="drop-flag pract" id="Frances"     value="fra"> </i>Francés</a>
-                            <a class="dropdown-item pract" id="Italiano"><i class="drop-flag pract" id="Italiano"   value="ita"> </i>Italiano</a>
-                            <a class="dropdown-item pract" id="Koreano"><i class="drop-flag pract" id="Koreano"     value="kor"> </i>Koreano</a>
-                            <a class="dropdown-item pract" id="Arabe"><i class="drop-flag pract" id="Arabe"         value="ara"> </i>Árabe</a>
-                            <a class="dropdown-item pract" id="Chino"><i class="drop-flag pract" id="Chino"         value="chn"> </i>Chino</a>
-                            <a class="dropdown-item pract" id="Ruso"><i class="drop-flag pract" id="Ruso"           value="rus"> </i>Ruso</a>
+                            <div id="accordion">
+                                <a href="#" data-toggle="collapse" data-target="#collapse1" style="margin-right: 328px;"> ¿Necesitas ayuda?</a>
+                                <div class="collapse" id="collapse1">
+                                    <ul style="list-style:disc;">
+                                        <li> <a href="#modal_rest_pass" data-toggle="modal" data-target="#modal_rest_pass">¿Olvidaste tu contraseña?</a></li>
+                                        <li> <a href="#">Otros problemas con el inicio de sesión</a></li>   
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>                    
-                </div>
 
-                <div class="modal-footer justify-content-center">
-                    <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="reg_user_2"> <b>Siguiente</b></button>
-                </div>
-            
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal_lang_n" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="margin-left: 130px;"> </a>
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="font-size: 30px; color: black; margin-left: 45px;"> <b>¿Cual es tu idioma nativo?</b></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            
-                <div class="modal-body" >
-                    <div class="dropdown justify-items-center" id="sel_lang_n">
-                        <button class="btn btn-outline w3-round-xxlarge dropdown-toggle" id="drop_lang_n" data-toggle="dropdown" style="margin-bottom: 15px;"><b>Selecciona un idioma</b></button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <h4 class="dropdown-header">Idiomas populares</h4>
-                            <a class="dropdown-item nativ" id="Español"><i class="drop-flag nativ" id="Español"     value="esp"> </i>Español</a>
-                            <a class="dropdown-item nativ" id="Ingles"><i class="drop-flag nativ" id="Ingles"       value="eng"> </i>Iglés</a>
-                            <a class="dropdown-item nativ" id="Portugues"><i class="drop-flag nativ" id="Portugues" value="por"> </i>Portugués</a>
-                            <a class="dropdown-item nativ" id="Aleman"><i class="drop-flag nativ" id="Aleman"       value="ger"> </i>Alemán</a>
-                            <a class="dropdown-item nativ" id="Frances"><i class="drop-flag nativ" id="Frances"     value="fra"> </i>Francés</a>
-                            <a class="dropdown-item nativ" id="Italiano"><i class="drop-flag nativ" id="Italiano"   value="ita"> </i>Italiano</a>
-                            <a class="dropdown-item nativ" id="Koreano"><i class="drop-flag nativ" id="Koreano"     value="kor"> </i>Koreano</a>
-                            <a class="dropdown-item nativ" id="Arabe"><i class="drop-flag nativ" id="Arabe"         value="ara"> </i>Árabe</a>
-                            <a class="dropdown-item nativ" id="Chino"><i class="drop-flag nativ" id="Chino"         value="chn"> </i>Chino</a>
-                            <a class="dropdown-item nativ" id="Ruso"><i class="drop-flag nativ" id="Ruso"           value="rus"> </i>Ruso</a>
-                        </div>
-                    </div>                    
-                </div>
-
-                <div class="modal-footer justify-content-center">
-                    <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="reg_user_3"> <b>Siguiente</b></button>
+                    </form>
                 </div>
             
             </div>
@@ -329,7 +290,7 @@
                 <div class="modal-body">
                     <p style="text-align: center;">No te preocupes, ingresa tu correo y te enviaremos un link para que restaures tu contraseña</p>
 
-                    <form>
+                    <form method="post">
                         <div class="form-group">
                             <label for="e-mail" class="col-form-label"> <b>Ingresa tu correo electrónico</b></label>
                             <input type="email" class="form-control" id="e-mail" placeholder="e-mail o nombre de usuario" required>
@@ -337,7 +298,7 @@
                 </div>
 
                 <div class="modal-footer justify-content-center">
-                    <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n" name="login_user"> <b>Enviar</b></button>
+                    <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_n"> <b>Enviar</b></button>
                 </div>
             
             </div>
@@ -388,7 +349,7 @@
                 <footer class="footer" >
                     <h5 class="text-uppercase font-weight-bold">Escríbenos</h5><hr>
 
-                    <form>
+                    <form >
                         <fieldset class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electrónico">
                         </fieldset>
