@@ -4,3 +4,5 @@ Idioms es una plataforma para practicar idiomas con hablantes nativos a traves d
 Adicionalmente hay información acerca de los idiomas disponibles, tales como websites donde se puede practicar, datos curiosos y videos de profesores en youtube. 
 
 ## Puedes acceder a la plataforma en el siguiente enlace https://idioms-videocall.000webhostapp.com/
+
+### Desarrollado por Jose David González y Santiago Ruiz
