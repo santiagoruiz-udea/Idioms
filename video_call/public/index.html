@@ -12,6 +12,12 @@
 </head>
 
 <body>
+    <nav>
+        <div class="row align-items-center justify-content-around">
+                <a href="https://idioms-videocall.000webhostapp.com/" class="navbar-brand" style="margin-left: -400px;"> <img src="img/logo.png" style="width: 430px;"> </a>
+        </div>
+    </nav>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-6 d-flex justify-content-center">
@@ -24,30 +30,164 @@
         </div>
 
         <div class="row">
-            <div class="col m-6">
-                <select id="filter" class="w-30 ml-2 mt-2 select font-weight-bold ">
-                    <option value="none" selected>Elige un filtro</option>
-                    <option value="none">Normal</option>
-                    <option value="grayscale(100%)">Escala de grises</option>
-                    <option value="sepia(100%)">Sepia</option>
-                    <option value="contrast(150%)">Warm</option>
-                    <option value="blur(20px)">Borroso</option>
-                    <option value="invert(100%)">Negativo</option>
-                    <option value="hue-rotate(180deg">No se</option>
-                    <option value="saturate(25)">Saturacion</option>
-                </select>
+            <div class="col l-6">
+                <div class="row">
+                    <select id="filter" class=" select font-weight-bold ">
+                        <option value="none" selected>Elige un filtro</option>
+                        <option value="none">Normal</option>
+                        <option value="grayscale(100%)">Escala de grises</option>
+                        <option value="sepia(100%)">Sepia</option>
+                        <option value="contrast(150%)">Warm</option>
+                        <option value="blur(20px)">Borroso</option>
+                        <option value="invert(100%)">Negativo</option>
+                        <option value="hue-rotate(180deg)">No se</option>
+                        <option value="saturate(25)">Saturacion</option>
+                    </select>
+
+                    <div><a href="https://idioms-videocall.000webhostapp.com/" class="btn btn-outline w3-round-xxlarge" id="btn_abandonar" >Abandonar</a></div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <a href="https://idioms-videocall.000webhostapp.com/" class="navbar-brand"> <img src="img/logo.png" style="width: 430px;"> </a>
+                </div>
+
             </div>
-            
-            <div class="col m-6">             
-                <pre id="messages"></pre>
-                <textarea id="yourMessage"></textarea>
-                <button class="btn btn-outline w3-round-xxlarge" id="send">Send</button>
-            </div>
+
+            <div class="col l-6">   
+                <section>
+
+                </section>      
+                <div>
+                    <textarea id="yourMessage"></textarea>
+                    <div><button class="btn btn-outline w3-round-xxlarge" id="send">Send</button></div>
+                </div>
+            </div>    
+
         </div>
+
+        <div class="header-title2">
+            <h1>Conoce amigos alrededor de todo el mundo</h1>
+            <p class="p_header">Con <b>idioms</b> podrás hacer amigos extranjeros, compartir tu cultura y mejorar tus habilidades conversacionales en los idiomas que estas practicando</p>
+
+            <div class="row flags">
+                <div class="offset-lg-1 col-lg-1 align-items-center">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/esp.html"><img src="img/Español.png" alt=""></a>
+                    <p class="p_flags">Español</p>
+                </div>
+        
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/eng.html"><img src="img/Ingles.png" alt=""></a>
+                    <p class="p_flags">Ingles</p>
+                </div>
+        
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/por.html"><img src="img/Portugues.png" alt=""></a>
+                    <p class="p_flags">Portugues</p>
+                </div>
+                
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/ger.html"><img src="img/Aleman.png" alt=""></a>
+                    <p class="p_flags">Aleman</p>
+                </div>
+                
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/fre.html"><img src="img/Frances.png" alt=""></a>
+                    <p class="p_flags">Francés</p>
+                </div>
+        
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/ita.html"><img src="img/Italiano.png" alt=""></a>
+                    <p class="p_flags">Italiano</p>
+                </div>
+        
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/kor.html"><img src="img/Coreano.png" alt=""></a>
+                    <p class="p_flags">Coreano</p>
+                </div>
+        
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/ara.html"><img src="img/Arabe.png" alt=""></a>
+                    <p class="p_flags">Árabe</p>
+                </div>
+                
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/chi.html"><img src="img/Chino.png" alt=""></a>
+                    <p class="p_flags">Chino</p>
+                </div>
+        
+                <div class="col-lg-1">
+                    <a href="https://idioms-videocall.000webhostapp.com/lang_info/rus.html"><img src="img/Ruso.png" alt=""></a>
+                    <p class="p_flags">Ruso</p>
+                </div>
+            </div>
+        
+        </div>
+
     </div>
 
-    <div class="container-fluid">
+    <div id="footer" class="container-fluid" >
+        <div class="row" >
+            <div class="col-lg-6 col-md-12 col-sm-12" style="background-color: #202020;">
+                <footer class="footer" >
+                    <div class="row" >
+                        <div class="col-md-6">
+                            <h5 class="text-uppercase" style="color: #f0eeee;"> Conoce más </h5>
+                            <ul class="list-unstyled"><br>
+                                <li > <a>Acerca de nosotros</a> </li><br>
+                                <li > <a>Preguntas frecuentes</a> </li><br>
+                                <li > <a>Contactanos</a> </li>
+                            </ul>
+                        </div>
 
+                        <!-- Grid column -->
+                        <div class="col-md-6 ">
+                            <h6 class="text-uppercase mb-0 text-center" style="color: #f0eeee;">¡Síguenos!</h6>
+
+                            <!-- Facebook -->
+                            <a><i> <img src="img/fb.png" style="width: 15%;"></i></a>
+                            
+                            <!--Instagram-->
+                            <a> <i><img src="img/ig.png" style="width: 15%;"> </i></a>
+
+                            <!--WhatsApp-->
+                            <a> <i> <img src="img/wp.png" style="width: 15%;"></i> </a>
+
+                            <ul class="list-unstyled"><br>
+                                <li > <a>santiago.ruiz3@udea.edu.co</a> </li>
+                                <li > +57 323 5043165 </li><br>
+                                <li > <a>jgonzalez.h@udea.edu.co</a> </li>
+                                <li > +57 323 5043165 </li><br>
+                                <li > Medellín, Colombia </li>
+                                <li > Universidad de Antioquia </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            
+            <div class="col-lg-6 col-md-12" style="background-color: #202020;" >
+                <footer class="footer" >
+                    <h5 class="text-uppercase font-weight-bold">Escríbenos</h5><hr>
+
+                    <form >
+                        <fieldset class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electrónico">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <textarea class="form-control" id="exampleMessage" placeholder="Mensaje"></textarea>
+                        </fieldset>
+
+                        <div class="form-gorup row">
+                            <button class="btn btn-outline w3-round-xxlarge"> Enviar</button>
+                        </div>
+                    </form>
+                </footer>
+            </div>
+        </div>
+    </div> 
         
 
 

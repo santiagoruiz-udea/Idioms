@@ -31,7 +31,7 @@
     <nav>
         <div class="row align-items-center justify-content-around">
             <div class="col-lg-2">
-                <a href="index.html" class="navbar-brand" style="margin-left: 10px;"> <img src="icons/logo.png"> </a>
+                <a href="index.php" class="navbar-brand" style="margin-left: 10px;"> <img src="img/logo.png" style="width: 400px;"> </a>
             </div>
 
             <div class="offset-lg-7 col-lg-1">
@@ -120,21 +120,17 @@
         </ul>
     </div>
 
-    <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="width: 100%; margin-left: 350px;"> </a>
+    <a href="index.php" class="navbar-brand"> <img src="img/logo.png" style="width: 40%; margin-left: 390px;"> </a>
 
     <div class="header-title2">
         <h1>Conoce amigos alrededor de todo el mundo</h1>
         <p>Con <b>idioms</b> podrás hacer amigos extranjeros, compartir tu cultura y mejorar tus habilidades conversacionales en los idiomas que estas practicando</p>
-        <div class="row align-items-center justify-content-around">
-            <div class="col-lg-1">
-                <button class="btn btn-outline w3-round-xxlarge next" id="singin"  type="button" data-toggle="modal" data-target="#modal_signin" ><b>Regístrate</b></button>
-            </div>
-        </div>
+        <button class="btn btn-outline w3-round-xxlarge next" id="singin"  type="button" data-toggle="modal" data-target="#modal_signin" ><b>Regístrate</b></button>
     </div>
     
-    <div class="modal fade" id="modal_signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="margin-left: 130px;"> </a>
+            <a href="index.php" class="navbar-brand"> <img src="../img/logo.png" style="margin-left: 100px; width: 65%;"> </a>
 
             <div class="modal-content">
                 <div class="modal-header">
@@ -146,7 +142,6 @@
             
                 <div class="modal-body">
                     <form method="post" action="index.php">
-                    <?php include('errors.php'); ?>
                         <div class="form-group">
                             <label for="name" class="col-form-label"> <b>Nombre</b></label>
                             <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" required>
@@ -174,27 +169,27 @@
                         
                         <div class="form-group">
                             <label for="password" class="col-form-label"><b>Contraseña</b></label>
-                            <input type="password" class="form-control" id="password" minength="6" placeholder="6 caracteres como mínimo" name="password_1" required>
+                            <input type="password" class="form-control" id="password" minlength="6" placeholder="6 caracteres como mínimo" name="password_1" required>
                         </div>
 
                         <div class="form-group">
                             <label for="password" class="col-form-label"><b>Vuelve a escribir la contraseña</b></label>
-                            <input type="password" class="form-control" id="password_2" minength="6" placeholder="Ingrese nuevamente su contraseña" name="password_2" required>
+                            <input type="password" class="form-control" id="password_2" minlength="6" placeholder="Ingrese nuevamente su contraseña" name="password_2" required>
                         </div>
                         <div class="form-group">  
                             <label for="targlang" class="col-form-label"><b>Elige el idioma que quieres aprender</b></label>
                             <div class="container">
                                 <select class="my-select" name="targlang">
-                                    <option data-img-src="img/Español.png" value="esp" selected>Español</option>
-                                    <option data-img-src="img/Ingles.png" value="eng"> Inglés</option>
-                                    <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
-                                    <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
-                                    <option data-img-src="img/Frances.png" value="fra"> Francés</option>
-                                    <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
-                                    <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
-                                    <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
-                                    <option data-img-src="img/Chino.png" value="chn"> Chino</option>
-                                    <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
+                                    <option data-img-src="../img/Español.png" value="esp" selected>Español</option>
+                                    <option data-img-src="../img/Ingles.png" value="eng"> Inglés</option>
+                                    <option data-img-src="../img/Portugues.png" value="por"> Portugués</option>
+                                    <option data-img-src="../img/Aleman.png" value="ger"> Alemán</option>
+                                    <option data-img-src="../img/Frances.png" value="fra"> Francés</option>
+                                    <option data-img-src="../img/Italiano.png" value="ita"> Italiano</option>
+                                    <option data-img-src="../img/Coreano.png" value="kor"> Coreano</option>
+                                    <option data-img-src="../img/Arabe.png" value="ara"> Árabe</option>
+                                    <option data-img-src="../img/Chino.png" value="chn"> Chino</option>
+                                    <option data-img-src="../img/Ruso.png" value="rus"> Ruso </option>
                                 </select>
                             </div>                   
                         </div>
@@ -202,23 +197,23 @@
                             <label for="natlang" class="col-form-label"><b>Elige tu idioma nativo</b></label>
                             <div class="container">
                                 <select class="my-select" name="natlang">
-                                    <option data-img-src="img/Español.png" value="esp" selected>Español</option>
-                                    <option data-img-src="img/Ingles.png" value="eng"> Inglés</option>
-                                    <option data-img-src="img/Portugues.png" value="por"> Portugués</option>
-                                    <option data-img-src="img/Aleman.png" value="ger"> Alemán</option>
-                                    <option data-img-src="img/Frances.png" value="fra"> Francés</option>
-                                    <option data-img-src="img/Italiano.png" value="ita"> Italiano</option>
-                                    <option data-img-src="img/Koreano.png" value="kor"> Koreano</option>
-                                    <option data-img-src="img/Arabe.png" value="ara"> Árabe</option>
-                                    <option data-img-src="img/Chino.png" value="chn"> Chino</option>
-                                    <option data-img-src="img/Ruso.png" value="rus"> Ruso </option>
+                                    <option data-img-src="../img/Español.png" value="esp" selected>Español</option>
+                                    <option data-img-src="../img/Ingles.png" value="eng"> Inglés</option>
+                                    <option data-img-src="../img/Portugues.png" value="por"> Portugués</option>
+                                    <option data-img-src="../img/Aleman.png" value="ger"> Alemán</option>
+                                    <option data-img-src="../img/Frances.png" value="fra"> Francés</option>
+                                    <option data-img-src="../img/Italiano.png" value="ita"> Italiano</option>
+                                    <option data-img-src="../img/Coreano.png" value="kor"> Coreano</option>
+                                    <option data-img-src="../img/Arabe.png" value="ara"> Árabe</option>
+                                    <option data-img-src="../img/Chino.png" value="chn"> Chino</option>
+                                    <option data-img-src="../img/Ruso.png" value="rus"> Ruso </option>
                                 </select>
                             </div>                   
                         </div>
 
                         <div class="modal-footer justify-content-center" >
                             <button class="btn btn-outline w3-round-xxlarge next" type="submit" data-toggle="modal" data-target="#modal_lang_p" name="reg_user"> <b>Siguiente</b></button>
-                            <p>Al continuar, aceptas las <a href="#">Condiciones de uso<a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
+                            <p>Al continuar, aceptas las <a href="#">Condiciones de uso</a> y el <a href="#">Aviso de privacidad</a> de Shop Online.</p>
                         </div>
                         
                     </form>
@@ -229,7 +224,7 @@
 
     <div class="modal fade" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="margin-left: 130px;"> </a>
+            <a href="index.php" class="navbar-brand"> <img src="../img/logo.png" style="margin-left: 100px; width: 65%;"> </a>
 
             <div class="modal-content">
                 <div class="modal-header">
@@ -240,6 +235,7 @@
                 </div>
             
                 <div class="modal-body">
+                    
                     <form method="post" >
                         <div class="form-group">
                             <label for="username" class="col-form-label"> <b>Nombre de usuario</b></label>
@@ -255,7 +251,7 @@
                             <label> <input type="checkbox" name="remember" style="margin-left: 10px;" checked> Recordar mis datos</label>
                         </div>
                         <div class="modal-footer justify-content-center" >
-                            <button class="btn btn-outline w3-round-xxlarge" type="submit" name="login_user"> <b>Iniciar sesión</b></button>
+                            <button class="btn btn-outline w3-round-xxlarge next" type="submit" name="login_user"> <b>Iniciar sesión</b></button>
                     
                             <div id="accordion">
                                 <a href="#" data-toggle="collapse" data-target="#collapse1" style="margin-right: 328px;"> ¿Necesitas ayuda?</a>
@@ -277,7 +273,7 @@
 
     <div class="modal fade" id="modal_rest_pass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <a href="index.html" class="navbar-brand"> <img src="icons/logo.png" style="margin-left: 130px;"> </a>
+            <a href="index.php" class="navbar-brand"> <img src="../img/logo.png" style="margin-left: 100px; width: 65%;"> </a>
 
             <div class="modal-content">
                 <div class="modal-header">
@@ -295,6 +291,7 @@
                             <label for="e-mail" class="col-form-label"> <b>Ingresa tu correo electrónico</b></label>
                             <input type="email" class="form-control" id="e-mail" placeholder="e-mail o nombre de usuario" required>
                         </div>
+                    </form>
                 </div>
 
                 <div class="modal-footer justify-content-center">
@@ -304,7 +301,7 @@
             </div>
         </div>
     </div>
-    
+
     <div id="footer" class="container-fluid" >
         <div class="row" >
             <div class="col-lg-6 col-md-12 col-sm-12" style="background-color: #202020;">
@@ -324,18 +321,18 @@
                             <h6 class="text-uppercase mb-0 text-center" style="color: #f0eeee;">¡Síguenos!</h6>
 
                             <!-- Facebook -->
-                            <a><i> <img src="icons/fb.png" style="width: 15%;"></i></a>
+                            <a><i> <img src="../img/fb.png" style="width: 15%;"></i></a>
                             
                             <!--Instagram-->
-                            <a> <i><img src="icons/ig.png" style="width: 15%;"> </i></a>
+                            <a> <i><img src="../img/ig.png" style="width: 15%;"> </i></a>
 
                             <!--WhatsApp-->
-                            <a> <i> <img src="icons/wp.png" style="width: 15%;"></i> </a>
+                            <a> <i> <img src="../img/wp.png" style="width: 15%;"></i> </a>
 
                             <ul class="list-unstyled"><br>
-                                <li > <a>santiago.ruiz3@udea.edu.co</a> </li>
+                                <li > <a>jose.gonzalezh@udea.edu.co</a> </li>
                                 <li > +57 323 5043165 </li><br>
-                                <li > <a>jgonzalez.h@udea.edu.co</a> </li>
+                                <li > <a>santiago.ruiz3@udea.edu.co</a> </li>
                                 <li > +57 323 5043165 </li><br>
                                 <li > Medellín, Colombia </li>
                                 <li > Universidad de Antioquia </li>
@@ -349,7 +346,7 @@
                 <footer class="footer" >
                     <h5 class="text-uppercase font-weight-bold">Escríbenos</h5><hr>
 
-                    <form >
+                    <form>
                         <fieldset class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electrónico">
                         </fieldset>
@@ -364,7 +361,7 @@
                 </footer>
             </div>
         </div>
-    </div> 
+    </div>
 </body>
 </html>
 

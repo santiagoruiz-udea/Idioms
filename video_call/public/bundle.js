@@ -7572,7 +7572,18 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 
             peer.on('data', function (data) {
               if (data.indexOf(":") == 7){
-                document.querySelector('#messages').textContent += data + '\n';
+                console.log("Mensaje Recibido")
+
+                //document.querySelector('#messages').textContent += data + '\n';
+
+                //--------
+                var container = document.querySelector('section');
+                var newMessage = document.createElement('p');
+                newMessage.innerText = data + '\n';
+                container.appendChild(newMessage);
+                var seperator = document.createElement('br');
+                container.appendChild(seperator);
+                container.scrollTop = container.scrollHeight;
               }
             })
             return peer
@@ -7657,10 +7668,17 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 send_butt.onclick = function(){
     let yourMessage = document.querySelector('#yourMessage').value;
     if (client.peer) {
-      console.log("Mensaje Enviado")
       client.peer.send("Partner: " + yourMessage)
-      document.querySelector('#messages').textContent += "You: " + yourMessage + '\n';
-      document.querySelector('#yourMessage').textContent = '';
+      document.querySelector('#yourMessage').value = document.querySelector('#yourMessage').defaultValue;;
+
+      //--------
+      var container = document.querySelector('section');
+      var newMessage = document.createElement('p');
+      newMessage.innerText = "You: " + yourMessage;
+      container.appendChild(newMessage);
+      var seperator = document.createElement('br');
+      container.appendChild(seperator);
+      container.scrollTop = container.scrollHeight;
 
     }
 }

@@ -1,10 +1,9 @@
-
 let Peer = require('simple-peer')
 let socket = io()
 const video = document.querySelector('video')
 const filter = document.querySelector('#filter')
 const send_butt = document.querySelector('#send')
-const checkboxTheme = document.querySelector('#theme')
+const chat = document.querySelector('#messages')
 let client = {}
 let currentFilter
 
@@ -13,7 +12,6 @@ let currentFilter
 //get stream
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     .then(stream => {
-        console.log("Hola mundo!")
         socket.emit('NewClient')
         video.srcObject = stream
         video.play()
@@ -40,6 +38,23 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
                 let decodedData = new TextDecoder('utf-8').decode(data)
                 let peervideo = document.querySelector('#peerVideo')
                 peervideo.style.filter = decodedData
+            })
+
+            peer.on('data', function (data) {
+              if (data.indexOf(":") == 7){
+                console.log("Mensaje Recibido")
+
+                //document.querySelector('#messages').textContent += data + '\n';
+
+                //--------
+                var container = document.querySelector('section');
+                var newMessage = document.createElement('p');
+                newMessage.innerText = data + '\n';
+                container.appendChild(newMessage);
+                var seperator = document.createElement('br');
+                container.appendChild(seperator);
+                container.scrollTop = container.scrollHeight;
+              }
             })
             return peer
         }
@@ -120,39 +135,27 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     })
     .catch(err => document.write(err))
 
-checkboxTheme.addEventListener('click', () => {
-    if (checkboxTheme.checked == true) {
-        document.body.style.backgroundColor = '#212529'
-        if (document.querySelector('#muteText')) {
-            document.querySelector('#muteText').style.color = "#fff"
-        }
-
-    }
-    else {
-        document.body.style.backgroundColor = '#fff'
-        if (document.querySelector('#muteText')) {
-            document.querySelector('#muteText').style.color = "#212529"
-        }
-    }
-}
-)
-
 send_butt.onclick = function(){
-    // let yourMessage = document.querySelector('#yourMessage').value;
-    // document.write('Mensaje enviado')
-    // alert("HOla")
-    // if (client.peer) {
-    //     client.peer.send(yourMessage)
-    // }
+    let yourMessage = document.querySelector('#yourMessage').value;
+    if (client.peer) {
+      console.log("Mensaje Enviado")
+      client.peer.send("Partner: " + yourMessage)
+      //document.querySelector('#messages').textContent += "You: " + yourMessage + '\n';
+      document.querySelector('#yourMessage').textContent = '';
 
-    document.body.style.backgroundColor = '#212529'
+      //--------
+      var container = document.querySelector('section');
+      var newMessage = document.createElement('p');
+      newMessage.innerText = yourMessage;
+      container.appendChild(newMessage);
+      var seperator = document.createElement('br');
+      container.appendChild(seperator);
+      container.scrollTop = container.scrollHeight;
 
+    }
 }
 
-// client.peer.on('data', function (data) {
-//     console.log("Mensaje recibido")
-//     document.querySelector('#messages').textContent += data + '\n';
-// })
+
 
 
 
@@ -162,6 +165,4 @@ function CreateDiv() {
     div.id = "muteText"
     div.innerHTML = "Click to Mute/Unmute"
     document.querySelector('#peerDiv').appendChild(div)
-    if (checkboxTheme.checked == true)
-        document.querySelector('#muteText').style.color = "#fff"
 }

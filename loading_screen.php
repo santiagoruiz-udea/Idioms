@@ -23,16 +23,63 @@
         <link rel="stylesheet" href="css/ImageSelect.css">
         <link rel="stylesheet" href="css/load_style.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/chosen.jquery.js"></script>
-        <script src="js/ImageSelect.jquery.js"></script>
+        <script src="../js/chosen.jquery.js"></script>
+        <script src="../js/ImageSelect.jquery.js"></script>
 
     </head>
 
 <body>
+
     
-    <div class="header-title1">
-        <h3>Estamos intentando conetarte con un amigo idioms...</h3>
-    </div>
+     <?php   
+        echo("<nav>
+            <div class='row align-items-center justify-content-around'>
+                <div class='col-lg-2'>
+                    <a href='https://idioms-videocall.000webhostapp.com/' class='navbar-brand' style='margin-left: -50px; margin-top:200px;'> <img src='img/logo.png' style='width: 600px; margin-left: -150px;'> </a>
+                </div>
+            </div>
+        </nav>
+    
+        <div class='header-title1'>
+            <h3>Estamos intentando conectarte con un amigo, espera un momento...</h3>
+        </div>");
+    ?>
+    
+    <?php   
+        
+        $db = mysqli_connect('localhost', 'id14357325_santiagoruiz3', 'H2BpXpof#ebPonmU', 'id14357325_users');
+        $username = $_COOKIE["user_name"];
+        $natlang = $_COOKIE["nat_lang"];
+        $targlang = $_COOKIE["targ_lang"];
+        if(count($_COOKIE) > 0) {
+          echo "Cookies are enabled.";
+        } 
+        else {
+          echo "Cookies are disabled.";
+        }
+        //$flag = 0;
+        
+        //while($flag < 10){
+            //sleep(1);
+            //echo('hello');
+            //echo($username);
+            //echo($natlang);
+            //echo($targlang);
+            //$flag = $flag + 1;
+        
+            //$lenguaje = "SELECT * FROM users WHERE natlang='$targlang' AND targlang='$natlang' ORDER BY RAND LIMIT 1";
+            //$result = mysqli_query($db, $lenguaje);
+            //$resultCheck = mysqli_num_rows($result);
+            //if($resultCheck > 0){
+              //  header( "Location: https://idioms-videocall.000webhostapp.com/lang_info/ita.html" );
+                //ob_end_flush();
+                //$flag = $flag + 1;
+            //}
+          //}
+
+
+?>
+    
 
 
 
